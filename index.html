@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Floating Emojis -->
+
+<div class="emoji emoji1">🤔</div>
+<div class="emoji emoji2">😏</div>
+<div class="emoji emoji3">😂</div>
+<div class="emoji emoji4">🤣</div>
+<div class="emoji emoji5">🥳</div>
+<div class="emoji emoji6">😜</div>
+<div class="emoji emoji7">🤪</div>
+<div class="emoji emoji8">😎</div>
+<div class="emoji emoji9">❓</div>
+<div class="emoji emoji10">😁</div>
+
+<!-- Custom Emoji Images -->
+
+<img src="images/thinking.png" class="customEmoji custom1">
+
+<img src="images/naughty.png" class="customEmoji custom2">
+
+<img src="images/question.png" class="customEmoji custom3">
+
+<!-- Start Screen -->
+
+<div class="container" id="startScreen">
+
+<h1>🧠 Smart Quiz</h1>
+
+<input type="text" id="playerName" placeholder="Enter Your Name">
+
+<button onclick="startQuiz()">Start Quiz</button>
+
+</div>
+
+<!-- Quiz Screen -->
+
+<div class="container hidden" id="quizScreen">
+
+<h2 id="questionNumber"></h2>
+
+<h3 id="questionText"></h3>
+
+<input type="text" id="answerInput" placeholder="Type your answer">
+
+<button id="submitButton" onclick="checkAnswer()">Submit</button>
+
+<div class="button-row">
+  <button id="nextButton" class="hidden" onclick="nextQuestion()">Next</button>
+  <button class="exit-btn" onclick="finishQuiz()">Exit</button>
+</div>
+
+<div id="emojiResult"></div>
+
+<p id="correctAnswer" class="feedback-text"></p>
+
+</div>
+
+<!-- Final Screen -->
+
+<div class="container hidden" id="finalScreen">
+
+<h1>🎉 Quiz Finished 🎉</h1>
+
+<h2 id="finalName"></h2>
+
+<h2 id="finalScore"></h2>
+
+<h2 id="finalAttempted"></h2>
+
+<p id="finalMessage"></p>
+
+<div class="button-row">
+  <button id="viewScoresFinalBtn" class="view-scores-btn" onclick="showScores()">View Scores</button>
+  <button class="exit-btn" onclick="exitQuiz()">Exit</button>
+</div>
+
+<div id="scoreboard" class="hidden score-board"></div>
+
+</div>
+
+<!-- Admin Panel -->
+
+<div class="container hidden" id="adminPanel">
+
+<h2>👑 Admin Panel</h2>
+
+<input type="text" id="newQuestion" placeholder="New Question">
+
+<input type="text" id="newAnswer" placeholder="Correct Answer">
+
+<button onclick="addQuestion()">Add Question</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
