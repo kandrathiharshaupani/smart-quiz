@@ -22,7 +22,7 @@ const questions = [
 
   {
     question: "What do you call a funny mountain?",
-    answer: "hill-arious"
+    answer: "hillarious"
   }
 
 ];
